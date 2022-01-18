@@ -12,6 +12,6 @@
     "start": "node index.js",
     "server": "nodemon index.js",
     "client": "cd ./client && yarn build",
-    "dev": "concurrently \"yarn start\" \"yarn client\""
+    "begin": "concurrently \"yarn start\" \"yarn client\""
   }
 }
