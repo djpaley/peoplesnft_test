@@ -24,7 +24,7 @@ const addNewWhitelist = (request, response) => {
 
     pool.query(
         'INSERT INTO whitelists (wallet) VALUES ($1)',
-        [author, title],
+        [address],
         (error) => {
             if (error) {
                 throw error
