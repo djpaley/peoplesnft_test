@@ -1,6 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import { collection, query, where, addDoc, serverTimestamp, doc, getDocs  } from "firebase/firestore";
-import db from "../firebase"
 import bgImage from '../hero-bg.jpg';
 import Web3 from "web3";
 import Web3Modal from "web3modal";
