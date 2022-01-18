@@ -9,8 +9,7 @@ import {
     Navigation,
     Footer,
     Home,
-    Roadmap,
-    Team,
+    About,
     Privacy
 } from "./components";
 
@@ -24,8 +23,7 @@ ReactDOM.render(
             <Navigation />
             <Routes>
                 <Route path="/" element={<Home />} />
-                <Route path="/roadmap" element={<Roadmap />} />
-                <Route path="/team" element={<Team />} />
+                <Route path="/about" element={<About />} />
                 <Route path="/privacy-policy" element={<Privacy />} />
             </Routes>
             <Footer />
