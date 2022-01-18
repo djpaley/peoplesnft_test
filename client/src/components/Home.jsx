@@ -157,8 +157,7 @@ function Home() {
         console.log('adding wallet to database '+walletId)
         axios
             .post('http://69.55.55.90/api/whitelists/add', {
-                author: walletId,
-                title: "This is a new post."
+                address: walletId,
             })
             .then((response) => {
                 setPost(response.data);
