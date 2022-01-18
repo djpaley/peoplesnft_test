@@ -29,13 +29,12 @@
     "web3connect": "^1.0.0-beta.33",
     "web3modal": "^1.9.5"
   },
-  "proxy": "http://localhost:3002",
   "scripts": {
     "build-css": "node-sass-chokidar src/styles/scss -o src/styles/css",
     "watch-css": "npm run build-css && node-sass-chokidar src/styles/scss -o src/styles/css --watch",
     "watch": "sass src/styles/scss/theme.scss src/styles/css/theme.css --watch",
     "start": "react-app-rewired start",
-    "build": "react-app-rewired build",
+    "build": "react-app-rewired build --max_old_space_size=256 build",
     "test": "react-app-rewired test",
     "eject": "react-scripts eject"
   },

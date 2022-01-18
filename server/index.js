@@ -8,10 +8,10 @@ const app = express()
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use(cors())
-app.use(helmet)
+app.use(helmet())
 
 const getWhitelists = (request, response) => {
-    pool.query('SELECT * FROM whitelists_test', (error, results) => {
+    pool.query('SELECT * FROM books', (error, results) => {
         if (error) {
             throw error
         }
@@ -23,7 +23,7 @@ const addNewWhitelist = (request, response) => {
     const { wallet } = request.body
 
     pool.query(
-        'INSERT INTO whitelists_test (wallet) VALUES ($1)',
+        'INSERT INTO books (wallet) VALUES ($1)',
         [author, title],
         (error) => {
             if (error) {
@@ -36,7 +36,7 @@ const addNewWhitelist = (request, response) => {
 const getIdByWallet = (request, response) => {
     const id = parseInt(request.params.id)
 
-    pool.query('SELECT * FROM whitelists_test WHERE address = $1', [id], (error, results) => {
+    pool.query('SELECT * FROM books WHERE address = $1', [id], (error, results) => {
         if (error) {
             throw error
         }
