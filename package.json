@@ -15,6 +15,7 @@
     "start": "node index.js",
     "server": "nodemon index.js",
     "client": "cd ./client && yarn start",
-    "begin": "concurrently \"yarn server\" \"yarn client\""
+    "begin": "concurrently \"yarn server\" \"yarn client\"",
+    "build": "cd ./client && react-app-rewired build"
   }
 }
