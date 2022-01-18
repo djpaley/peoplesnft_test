@@ -5,6 +5,9 @@
   "repository": "git@github.com:djpaley/peoplesnft_test.git",
   "author": "David Paley <djpaley@gmail.com>",
   "license": "MIT",
+  "engines": {
+    "node": ">=14.0.0"
+  },
   "dependencies": {
     "concurrently": "^7.0.0"
   },
