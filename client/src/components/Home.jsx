@@ -132,13 +132,13 @@ function Home() {
 
     //return all resutls from database
     async function getAllWhitelists() {
-        const response = await axios.get('http://localhost:3002/whitelists')
+        const response = await axios.get('http://http://69.55.55.90/api//whitelists')
         console.log(response.data)
     }
 
     //check to see if wallet exists
     async function verifyByWallet(wallet) {
-        const response = await axios.get(`http://localhost:3002/whitelists/check/${wallet}`)
+        const response = await axios.get(`http://http://69.55.55.90/api//whitelists/check/${wallet}`)
             .then(res => {
                 //console.log(res);
                 var result = res.data.length;
@@ -156,7 +156,7 @@ function Home() {
     function addNewWhitelist(walletId) {
         console.log('adding wallet to database '+walletId)
         axios
-            .post('http://localhost:3002/whitelists/add', {
+            .post('http://http://69.55.55.90/api//whitelists/add', {
                 author: walletId,
                 title: "This is a new post."
             })
