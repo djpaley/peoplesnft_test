@@ -7,7 +7,8 @@ function Footer() {
     <footer className="py-3">
         <div className="container">
             <p className="m-0 text-center text-white">
-                Copyright &copy; The People's NFT {new Date().getFullYear()} | <NavLink className="navlink" to="/privacy-policy">Privacy Policy</NavLink>
+                Copyright &copy; The People's NFT {new Date().getFullYear()}
+                {/*| <NavLink className="navlink" to="/privacy-policy">Privacy Policy</NavLink>*/}
             </p>
         </div>
     </footer>
