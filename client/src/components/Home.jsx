@@ -198,7 +198,7 @@ function Home() {
 
                             <h2 className="display">Commemorating ConstitutionDAO</h2>
                             <h1 className="display">The People's NFT</h1>
-                            {currentAccount ? <button className="btn btn-light btn-lg"><strong>Connected: {truncate(currentAccount, 15)}</strong> {currentAccount}</button> : <button className="btn btn-light btn-lg" onClick={connectWallet}>Get Whitelisted</button>}
+                            {currentAccount ? <button className="btn btn-light btn-lg"><strong>Connected:</strong> {truncate(currentAccount, 15)}</button> : <button className="btn btn-light btn-lg" onClick={connectWallet}>Get Whitelisted</button>}
                             <p className="mt-5">Presenting NFT collections to drive the spirit forward. Together we will reclaim important cultural artifacts by bringing them under the shared governance of the people. Join us!</p>
                             <p>Brought to you by original ConstitutionDAO moderators and contributors.</p>
                             <p>Stay tuned for the drop info<br/>on our Twitter and Discord</p>
