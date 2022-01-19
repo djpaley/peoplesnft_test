@@ -97,7 +97,7 @@ function Home() {
             setMyWeb3('response is here '+response);
             response.eth.getAccounts().then((result) => (
                     console.log ('result is here '+result),
-                    verifyByWallet(result)
+                    verifyByWallet(result),
                     // addNewWhitelist(result),
                     window.location.reload(false)
 
