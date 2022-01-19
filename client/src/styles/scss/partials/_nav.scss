@@ -3,10 +3,19 @@
     a {
         color: #ffffff;
     }
+    .logo {
+        max-height: 50px;
+    }
     .navbar-nav {
         align-items: center;
+        flex-direction: row;
         .nav-link {
             color: #ffffff;
+        }
+    }
+    @media (min-width: 992px) {
+        .logo {
+            max-height: none;
         }
     }
 }

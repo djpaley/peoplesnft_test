@@ -4,8 +4,6 @@
 @use "partials/footer";
 
 
-
-
 .hero-content {
     background-size: cover;
     background-repeat: no-repeat;
@@ -27,15 +25,24 @@
     }
     h1 {
         color: rgb(243, 217, 177);
-        font-size: 4.5rem;
-        margin: 2rem 0 3.5rem;
+        font-size: 2.5rem;
+        margin: 1rem 0 1.5rem;
     }
     h2  {
-        font-size: 1.5rem;
+        font-size: 1.25rem;
     }
     .container {
         position: relative;
         color: #ffffff;
+    }
+    @media (min-width: 992px) {
+        h1 {
+            font-size: 4.5rem;
+        }
+        h2  {
+            font-size: 1.5rem;
+            margin: 2rem 0 3.5rem;
+        }
     }
 }
 

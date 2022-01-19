@@ -5,7 +5,10 @@ h2, .h2 {
     font-size: 44px;
 }
 p {
-    font-size: 21px;
+    font-size: 18px;
+    @media (min-width: 992px) {
+        font-size: 21px;
+    }
 }
 .font-large {
     font-size: 72px;

@@ -23,12 +23,12 @@ function Home() {
                 let web3;
                 let providerOptions;
                 providerOptions = {
-                    metamask: {
-                        id: "injected",
-                        name: "MetaMask",
-                        type: "injected",
-                        check: "isMetaMask"
-                    },
+                    // metamask: {
+                    //     id: "injected",
+                    //     name: "MetaMask",
+                    //     type: "injected",
+                    //     check: "isMetaMask"
+                    // },
                     walletconnect: {
                         package: WalletConnectProvider, // required
                         options: {
@@ -68,7 +68,7 @@ function Home() {
                     cacheProvider: false,
                     providerOptions
                 });
-                installMetamask()
+                //installMetamask()
                 provider = await web3Modal.connect();
                 provider.on('error', e => console.error('WS Error', e));
                 provider.on('end', e => console.error('WS End', e));

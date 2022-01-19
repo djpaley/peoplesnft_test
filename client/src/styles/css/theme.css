@@ -8,7 +8,12 @@ h2, .h2 {
 }
 
 p {
-  font-size: 21px;
+  font-size: 18px;
+}
+@media (min-width: 992px) {
+  p {
+    font-size: 21px;
+  }
 }
 
 .font-large {
@@ -35,47 +40,32 @@ body {
 .navbar a {
   color: #ffffff;
 }
+.navbar .logo {
+  max-height: 50px;
+}
 .navbar .navbar-nav {
   align-items: center;
+  flex-direction: row;
 }
 .navbar .navbar-nav .nav-link {
   color: #ffffff;
 }
+@media (min-width: 992px) {
+  .navbar .logo {
+    max-height: none;
+  }
+}
 
 footer {
   background: #202020;
-  -moz-column-gap: 1rem;
-  column-gap: 1rem;
-  grid-auto-flow: row;
-  line-height: 1.25rem;
-  row-gap: 2.5rem;
-  width: 100%;
   text-align: center;
 }
 footer p {
   font-size: 13px;
   margin: 0;
 }
-
-.connect-btn {
-  background: #ef4043;
-  border: none;
+footer p a.navlink {
   color: #ffffff;
-  box-shadow: 0 5px 0 #bb0f17;
-  cursor: pointer;
-  transition: all 0.2s ease;
-  border-radius: 0.5rem;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0.75rem 1.75rem;
-  margin: 0.5rem 0 1.75rem;
-  text-align: center;
-  text-transform: uppercase;
-}
-.connect-btn:hover {
-  background: #ef4043;
-  box-shadow: 0 0 0 #bb0f17;
 }
 
 .hero-content {
@@ -100,15 +90,24 @@ footer p {
 }
 .hero-content h1 {
   color: #f3d9b1;
-  font-size: 4.5rem;
-  margin: 2rem 0 3.5rem;
+  font-size: 2.5rem;
+  margin: 1rem 0 1.5rem;
 }
 .hero-content h2 {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
 }
 .hero-content .container {
   position: relative;
   color: #ffffff;
+}
+@media (min-width: 992px) {
+  .hero-content h1 {
+    font-size: 4.5rem;
+  }
+  .hero-content h2 {
+    font-size: 1.5rem;
+    margin: 2rem 0 3.5rem;
+  }
 }
 
 .quotes {
@@ -248,6 +247,10 @@ ul.timeline > li p.phase {
 }
 .about-page ul li a:hover {
   color: #777777;
+}
+
+.web3modal-modal-lightbox {
+  z-index: 5000;
 }
 
 /*# sourceMappingURL=theme.css.map */
