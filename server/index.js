@@ -21,9 +21,10 @@ const getWhitelists = (request, response) => {
 
 const addNewWhitelist = (request, response) => {
     const { walletId } = request.body
+    console.log('wallet server '+walletId)
     pool.query(
         'INSERT INTO whitelists (address) VALUES ($1)',
-        [walletId.trim()],
+        [walletId],
         (error) => {
             if (error) {
                 throw error
