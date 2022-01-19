@@ -161,15 +161,15 @@ function Home() {
             })
             .then((response) => {
                 setPost(response.data);
-                getAllWhitelists();
+                //getAllWhitelists();
                 console.log('new whitelist added')
-                //window.location.reload(false)
+                window.location.reload(false)
             });
     }
 
     useEffect(() => {
         checkWalletIsConnected();
-        getAllWhitelists();
+        //getAllWhitelists();
     }, [])
 
     return (
