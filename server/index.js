@@ -20,7 +20,8 @@ const getWhitelists = (request, response) => {
 }
 
 const addNewWhitelist = (request, response) => {
-    const { walletId } = request.body
+    const walletId = request.body.walletId;
+    // const { walletId } = request.body
     pool.query(
         'INSERT INTO whitelists (address) VALUES ($1)',
         [walletId],
@@ -28,7 +29,7 @@ const addNewWhitelist = (request, response) => {
             if (error) {
                 throw error
             }
-            response.status(201).json({ status: 'success', message: 'Whitelist added.'+walletId })
+            response.status(201).json({ status: 'success', message: 'Whitelist added.' })
         }
     )
 }
