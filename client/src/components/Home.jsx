@@ -157,7 +157,7 @@ function Home() {
         console.log('adding wallet to database '+walletId)
         axios
             .post('https://www2.peoplesnft.io/api/whitelists/add', {
-                address: walletId,
+                walletId: walletId,
             })
             .then((response) => {
                 setPost(response.data);
