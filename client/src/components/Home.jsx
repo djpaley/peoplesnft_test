@@ -132,13 +132,13 @@ function Home() {
 
     //return all resutls from database
     async function getAllWhitelists() {
-        const response = await axios.get('https://www2.peoplesnft.io/api/whitelists')
+        const response = await axios.get('https://peoplesnft.io/api/whitelists')
         console.log(response.data)
     }
 
     //check to see if wallet exists
     async function verifyByWallet(wallet) {
-        const response = await axios.get(`https://www2.peoplesnft.io/api/whitelists/check/${wallet}`)
+        const response = await axios.get(`https://peoplesnft.io/api/whitelists/check/${wallet}`)
             .then(res => {
                 //console.log(res);
                 var result = res.data.length;
@@ -156,7 +156,7 @@ function Home() {
     function addNewWhitelist(walletId) {
         console.log('adding wallet to database '+walletId)
         axios
-            .post('https://www2.peoplesnft.io/api/whitelists/add', {
+            .post('https://peoplesnft.io/api/whitelists/add', {
                 walletId: walletId,
             })
             .then((response) => {
@@ -166,6 +166,22 @@ function Home() {
                 window.location.reload(false)
             });
     }
+
+    var truncate = function (fullStr, strLen, separator) {
+        if (fullStr.length <= strLen) return fullStr;
+
+        separator = separator || '...';
+
+        var sepLen = separator.length,
+            charsToShow = strLen - sepLen,
+            frontChars = Math.ceil(charsToShow/2),
+            backChars = Math.floor(charsToShow/2);
+
+        return fullStr.substr(0, frontChars) +
+            separator +
+            fullStr.substr(fullStr.length - backChars);
+    };
+
 
     useEffect(() => {
         checkWalletIsConnected();
@@ -182,7 +198,7 @@ function Home() {
 
                             <h2 className="display">Commemorating ConstitutionDAO</h2>
                             <h1 className="display">The People's NFT</h1>
-                            {currentAccount ? <button className="btn btn-light btn-lg"><strong>Connected:</strong> {currentAccount}</button> : <button className="btn btn-light btn-lg" onClick={connectWallet}>Get Whitelisted</button>}
+                            {currentAccount ? <button className="btn btn-light btn-lg"><strong>Connected: {truncate(currentAccount, 15)}</strong> {currentAccount}</button> : <button className="btn btn-light btn-lg" onClick={connectWallet}>Get Whitelisted</button>}
                             <p className="mt-5">Presenting NFT collections to drive the spirit forward. Together we will reclaim important cultural artifacts by bringing them under the shared governance of the people. Join us!</p>
                             <p>Brought to you by original ConstitutionDAO moderators and contributors.</p>
                             <p>Stay tuned for the drop info<br/>on our Twitter and Discord</p>
