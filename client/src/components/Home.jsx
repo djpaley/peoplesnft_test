@@ -33,11 +33,11 @@ function Home() {
                         package: WalletConnectProvider, // required
                         options: {
                             infuraId: "04ff81e1b9564f8588e194b755d6cb01", // required
-                            qrcodeModalOptions: {
-                                mobileLinks: [
-                                    "metamask",
-                                ]
-                            }
+                            // qrcodeModalOptions: {
+                            //     mobileLinks: [
+                            //         "metamask",
+                            //     ]
+                            // }
                         }
                     },
                     'custom-coinbase': {
